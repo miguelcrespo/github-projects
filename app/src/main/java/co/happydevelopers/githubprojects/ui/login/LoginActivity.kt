@@ -1,18 +1,25 @@
-package co.happydevelopers.githubprojects
+package co.happydevelopers.githubprojects.ui.login
 
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProviders
+import co.happydevelopers.githubprojects.R
+import co.happydevelopers.githubprojects.utils.InjectorUtils
 import kotlinx.android.synthetic.main.activity_login.*
 import okhttp3.HttpUrl
 
 
 class LoginActivity : AppCompatActivity() {
+    private lateinit var viewModel: LoginViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        val factory = InjectorUtils.provideLoginViewFactory()
+        viewModel = ViewModelProviders.of(this, factory).get(LoginViewModel::class.java)
 
         setContentView(R.layout.activity_login)
 
