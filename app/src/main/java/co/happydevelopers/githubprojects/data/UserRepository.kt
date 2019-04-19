@@ -5,6 +5,12 @@ class UserRepository private constructor(private val userDao: UserDao) {
 
     fun setUser(user: User?) = userDao.setUser(user)
 
+    fun setGithubToken(githubToken: GithubToken) {
+        userDao.setToken(githubToken)
+    }
+
+    fun getGithubToken() = userDao.getTokenr()
+
     companion object {
         @Volatile
         private var instance: UserRepository? = null
