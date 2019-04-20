@@ -7,7 +7,8 @@ import co.happydevelopers.githubprojects.ui.login.LoginViewModelFactory
 object InjectorUtils {
     fun provideLoginViewFactory(): LoginViewModelFactory {
         val userRepository = UserRepository.getInstance(
-            Database.getInstance().userDao
+            Database.getInstance().userDao,
+            Database.getInstance().sharedPrefsHelper
         )
 
         return LoginViewModelFactory(userRepository)

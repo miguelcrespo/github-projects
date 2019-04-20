@@ -4,6 +4,8 @@ class Database private constructor() {
     var userDao = UserDao()
         private set
 
+    lateinit var sharedPrefsHelper: SharedPrefsHelper
+
     companion object {
         @Volatile
         private var instance: Database? = null
