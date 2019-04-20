@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import co.happydevelopers.githubprojects.R
-import co.happydevelopers.githubprojects.RepositoriesActivity
+import co.happydevelopers.githubprojects.ui.repositories.RepositoriesActivity
 import co.happydevelopers.githubprojects.utils.InjectorUtils
 import co.happydevelopers.githubprojects.utils.NetworkUtils
 import kotlinx.android.synthetic.main.activity_login.*

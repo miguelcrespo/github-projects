@@ -4,6 +4,9 @@ class Database private constructor() {
     var userDao = UserDao()
         private set
 
+    var repositoriesDao = RepositoriesDao()
+        private set
+
     lateinit var sharedPrefsHelper: SharedPrefsHelper
 
     companion object {

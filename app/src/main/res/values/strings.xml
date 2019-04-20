@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">GithubProjects</string>
+
+    <string-array name="repositories_array">
+        <item>All</item>
+        <item>Public</item>
+        <item>Private</item>
+    </string-array>
 </resources>

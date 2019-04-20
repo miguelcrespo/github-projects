@@ -1,6 +1,7 @@
 package co.happydevelopers.githubprojects.utils
 
 import co.happydevelopers.githubprojects.data.GithubToken
+import co.happydevelopers.githubprojects.data.Repository
 import co.happydevelopers.githubprojects.data.User
 import retrofit2.Call
 import retrofit2.http.*
@@ -15,4 +16,8 @@ interface JsonApi {
     @GET("user")
     @Headers("Accept: application/json")
     fun getAuthenticatedUser(@Header("Authorization") token: String): Call<User>
+
+    @GET("user/repos")
+    @Headers("Accept: application/json")
+    fun getRepositories(@Header("Authorization") token: String): Call<List<Repository>>
 }
